@@ -1,7 +1,13 @@
-# Automatic Maven Test
+# Automatic Git Unit Test
 
 ## About
-When set up, the scripts will automatically run your Maven unit tests when you `commit` or `push` your code. By enforcing your tests to run, it helps ensure that you commit quality code.
+When set up, the scripts will automatically run your unit tests when you `commit` or `push` your code. By enforcing your tests to run, it helps ensure that you commit quality code.
+
+Currently, there are hooks available for:
+### Maven
+Runs Maven tests with `mvn clean test`
+### Angular
+Runs Angular tests with `ng test` (I used this with Jasmine)
 
 ## Setup
 For your repository, add the desired script to your git hooks directory.  This directory can be found in `REPOSITORY_ROOT/.git/hooks`.
