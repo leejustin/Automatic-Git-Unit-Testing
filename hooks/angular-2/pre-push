@@ -1,0 +1,10 @@
+#!/bin/sh
+
+output=$(ng test --watch=false | tee /dev/tty)
+if [[ $output == *"("?" FAILED)"* ]]; then
+  echo "\n**Error: Not all tests succeeded. Please resolve all errors before pushing.**";
+  exit 1;
+else
+  echo "\n**Success: All test cases passed!**";
+  exit 0;
+fi
